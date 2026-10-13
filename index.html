@@ -1040,6 +1040,43 @@ Jumlah gambar rujukan yang tersedia: ${referenceFoods.length}.
             }
         }
 
+async function loadReferenceZipsAutomatically() {
+    const zipUrls = [
+        "https://raw.githubusercontent.com/nurainaaamirul-cloud/Pinggan-Makanan-Sihat-Cilik/main/gambar-sihat.zip",
+        "https://raw.githubusercontent.com/nurainaaamirul-cloud/Pinggan-Makanan-Sihat-Cilik/main/gambar-perlu-dikurangkan.zip"
+    ];
+
+    try {
+        const files = [];
+
+        for (const url of zipUrls) {
+            const response = await fetch(url);
+
+            if (!response.ok) {
+                throw new Error("Gagal memuat turun: " + url);
+            }
+
+            const blob = await response.blob();
+            const fileName = url.substring(url.lastIndexOf("/") + 1);
+
+            files.push(
+                new File([blob], fileName, {
+                    type: "application/zip"
+                })
+            );
+        }
+
+        await handleZipUpload({
+            target: {
+                files: files
+            }
+        });
+
+        console.log("Gambar rujukan ZIP selesai dimuatkan.");
+    } catch (error) {
+        console.error("Gagal memuatkan gambar rujukan ZIP:", error);
+    }
+}
         function renderCustomFoodList() {
             const container = document.getElementById('custom-foods-list');
             if (!container) return;
@@ -1115,6 +1152,7 @@ Jumlah gambar rujukan yang tersedia: ${referenceFoods.length}.
             document.getElementById('zip-status-msg').classList.add('hidden');
             renderCustomFoodList();
         }
+            loadReferenceZipsAutomatically();
     </script>
 </body>
 </html>
