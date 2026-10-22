@@ -113,6 +113,7 @@
 
     <main class="max-w-6xl mx-auto w-full flex-grow flex flex-col justify-center">
 
+        <!-- HOME PAGE -->
         <section id="page-home" class="w-full flex flex-col items-center">
             
             <div class="w-full max-w-3xl bg-white card-rounded p-6 md:p-10 border-4 border-pink-200 shadow-xl text-center relative overflow-hidden">
@@ -175,6 +176,7 @@
             </div>
         </section>
 
+        <!-- RESULTS PAGE WITH 3 COLUMNS -->
         <section id="page-results" class="hidden w-full flex-col">
             
             <!-- AI STATUS BADGE -->
@@ -238,10 +240,10 @@
                     </div>
                 </div>
 
-                <!-- COLUMN 3: TIDAK SIHAT -->
+                <!-- COLUMN 3: PERLU DIKURANGKAN -->
                 <div class="bg-pink-50 card-rounded p-5 border-4 border-pink-300 shadow-md flex flex-col h-full min-h-[440px]">
                     <div class="bg-pink-500 text-white rounded-2xl py-2 px-4 text-center font-extrabold text-lg mb-4 border-2 border-pink-600 flex items-center justify-center gap-2 shadow-sm">
-                        <span>TIDAK SIHAT 😟</span>
+                        <span>PERLU DIKURANGKAN 😟</span>
                     </div>
 
                     <div id="list-unhealthy-foods" class="flex-grow space-y-3 overflow-y-auto max-h-[380px] custom-scroll pr-1">
@@ -252,7 +254,7 @@
                     </div>
 
                     <div class="mt-3 pt-2 border-t border-pink-200 text-center">
-                        <span id="unhealthy-count-tag" class="text-xs font-bold text-pink-700">0 Makanan Tidak Sihat</span>
+                        <span id="unhealthy-count-tag" class="text-xs font-bold text-pink-700">0 Makanan Perlu Dikurangkan</span>
                     </div>
 
                 </div>
@@ -300,6 +302,7 @@
         </div>
     </div>
 
+    <!-- MODAL GAMBAR RUJUKAN MAKANAN WITH ZIP EXTRACTION SECTION -->
     <div id="modal-custom-images" class="fixed inset-0 bg-slate-900/75 backdrop-blur-sm z-50 hidden flex-col items-center justify-center p-4">
         <div class="bg-white card-rounded border-4 border-amber-400 p-5 max-w-2xl w-full flex flex-col shadow-2xl relative max-h-[90vh]">
             
@@ -312,7 +315,7 @@
                     <i class="fa-solid fa-images"></i> Pengurus Gambar Rujukan (ZIP)
                 </h3>
                 <p class="text-xs md:text-sm text-gray-600 mt-1 font-bold">
-                    Muat naik fail ZIP untuk mengekstrak dan memasukkan kesemua 21 gambar makanan secara automatik.
+                    Muat naik fail ZIP untuk mengestrak dan memasukkan kesemua 21 gambar makanan secara automatik.
                 </p>
             </div>
 
@@ -323,7 +326,7 @@
                     <span>Muat Naik Fail ZIP Makanan Pukal</span>
                 </div>
                 <p class="text-xs text-amber-800 font-semibold mb-3">
-                    Pilih kedua-dua fail <code class="bg-amber-200 px-1.5 py-0.5 rounded text-amber-950">makanan_sihat.zip</code> dan <code class="bg-amber-200 px-1.5 py-0.5 rounded text-amber-950">makanan_tidak_sihat.zip</code> serentak.
+                    Pilih kedua-dua fail <code class="bg-amber-200 px-1.5 py-0.5 rounded text-amber-950">makanan_sihat.zip</code> dan <code class="bg-amber-200 px-1.5 py-0.5 rounded text-amber-950">makanan_perlu_dikurangkan.zip</code> serentak.
                 </p>
 
                 <label for="input-zip-files" class="btn-kid bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-sm md:text-base px-6 py-2.5 rounded-xl border-b-4 border-emerald-700 flex items-center gap-2 cursor-pointer">
@@ -404,12 +407,12 @@
             { id: "tomato", name: "Tomato", category: "SIHAT", emoji: "🍅", image: createSvgDataUri("🍅", "Tomato", "#ECFDF5", "#10B981") },
             { id: "udang", name: "Udang", category: "SIHAT", emoji: "🦐", image: createSvgDataUri("🦐", "Udang", "#ECFDF5", "#10B981") },
 
-            // Kategori: TIDAK SIHAT 😟 (5 Item)
-            { id: "burger", name: "Burger", category: "TIDAK_SIHAT", emoji: "🍔", image: createSvgDataUri("🍔", "Burger", "#FDF2F8", "#EC4899") },
-            { id: "donut", name: "Donut", category: "TIDAK_SIHAT", emoji: "🍩", image: createSvgDataUri("🍩", "Donut", "#FDF2F8", "#EC4899") },
-            { id: "kek", name: "Kek", category: "TIDAK_SIHAT", emoji: "🍰", image: createSvgDataUri("🍰", "Kek", "#FDF2F8", "#EC4899") },
-            { id: "piza", name: "Piza", category: "TIDAK_SIHAT", emoji: "🍕", image: createSvgDataUri("🍕", "Piza", "#FDF2F8", "#EC4899") },
-            { id: "sosej", name: "Sosej", category: "TIDAK_SIHAT", emoji: "🌭", image: createSvgDataUri("🌭", "Sosej", "#FDF2F8", "#EC4899") }
+            // Kategori: PERLU DIKURANGKAN 😟 (5 Item)
+            { id: "burger", name: "Burger", category: "PERLU_DIKURANGKAN", emoji: "🍔", image: createSvgDataUri("🍔", "Burger", "#FDF2F8", "#EC4899") },
+            { id: "donut", name: "Donut", category: "PERLU_DIKURANGKAN", emoji: "🍩", image: createSvgDataUri("🍩", "Donut", "#FDF2F8", "#EC4899") },
+            { id: "kek", name: "Kek", category: "PERLU_DIKURANGKAN", emoji: "🍰", image: createSvgDataUri("🍰", "Kek", "#FDF2F8", "#EC4899") },
+            { id: "piza", name: "Piza", category: "PERLU_DIKURANGKAN", emoji: "🍕", image: createSvgDataUri("🍕", "Piza", "#FDF2F8", "#EC4899") },
+            { id: "sosej", name: "Sosej", category: "PERLU_DIKURANGKAN", emoji: "🌭", image: createSvgDataUri("🌭", "Sosej", "#FDF2F8", "#EC4899") }
         ];
 
         let currentImageDataUrl = null;
@@ -453,22 +456,6 @@
             pageResults.classList.remove('hidden');
             pageResults.classList.add('flex');
             window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function showErrorBanner(msg) {
-            textErrorMessage.innerHTML = `<i class="fa-solid fa-circle-exclamation mr-2"></i> ${msg}`;
-            bannerError.classList.remove('hidden');
-            bannerError.classList.add('flex');
-        }
-
-        function hideErrorBanner() {
-            bannerError.classList.add('hidden');
-            bannerError.classList.remove('flex');
-        }
-
-        function selectNewPicture() {
-            goToHome();
-            resetSelectedImage();
         }
 
         function handleFileUpload(event) {
@@ -548,254 +535,624 @@
             const context = cameraCanvas.getContext('2d');
             cameraCanvas.width = cameraVideo.videoWidth || 640;
             cameraCanvas.height = cameraVideo.videoHeight || 480;
-            context.drawImage(cameraVideo, 0, 0, cameraCanvas.width, cameraCanvas.height);
 
-            const dataUrl = cameraCanvas.toDataURL('image/jpeg');
-            setPlateImage(dataUrl);
+            context.drawImage(cameraVideo, 0, 0, cameraCanvas.width, cameraCanvas.height);
+            const capturedDataUrl = cameraCanvas.toDataURL('image/jpeg');
+
+            setPlateImage(capturedDataUrl);
             closeCameraModal();
         }
 
-        function startAiPlateScan() {
+        function selectNewPicture() {
+            resetSelectedImage();
+            goToHome();
+        }
+
+        async function startAiPlateScan() {
             if (!currentImageDataUrl) {
-                showErrorBanner('Sila pilih atau tangkap gambar pinggan terlebih dahulu.');
+                showErrorBanner('Sila pilih atau ambil gambar pinggan terlebih dahulu!');
                 return;
             }
 
             showResultsPage();
+            setAiLoadingState(true);
 
-            // Set loading state
-            scanningOverlay.classList.remove('hidden');
-            aiStatusCard.className = "w-full bg-indigo-100 border-3 border-indigo-300 card-rounded p-4 mb-6 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3";
-            aiIconBg.className = "w-11 h-11 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xl font-bold flex-shrink-0 shadow-sm";
-            aiStatusIcon.className = "fa-solid fa-robot";
-            aiStatusText.innerText = "Gemini AI sedang menganalisis makanan pada pinggan...";
-            aiBadgeStatus.className = "bg-indigo-200 text-indigo-900 text-xs font-extrabold px-3 py-1.5 rounded-full border border-indigo-300 flex items-center gap-1.5";
-            aiBadgeStatus.innerHTML = `<i class="fa-solid fa-spinner fa-spin text-indigo-700"></i> Memproses...`;
-
-            listHealthyFoods.innerHTML = `
-                <div class="h-full flex flex-col items-center justify-center p-6 text-center text-emerald-800 bg-white/70 rounded-2xl border-2 border-dashed border-emerald-200 min-h-[260px]">
-                    <div class="text-4xl mb-2">🥦🍚🍎</div>
-                    <p class="font-extrabold text-sm md:text-base">Sedang mengimbas...</p>
-                </div>`;
-            listUnhealthyFoods.innerHTML = `
-                <div class="h-full flex flex-col items-center justify-center p-6 text-center text-pink-800 bg-white/70 rounded-2xl border-2 border-dashed border-pink-200 min-h-[260px]">
-                    <div class="text-4xl mb-2">🍩🧃🍟</div>
-                    <p class="font-extrabold text-sm md:text-base">Sedang mengimbas...</p>
-                </div>`;
-
-            healthyCountTag.innerText = "0 Makanan Sihat Ditemui";
-            unhealthyCountTag.innerText = "0 Makanan Tidak Sihat";
-
-            // Simulate scanning and item selection from predefined preset foods
-            setTimeout(() => {
-                scanningOverlay.classList.add('hidden');
-
-                // Select a random sample of foods to simulate detection
-                const healthyList = PRESET_FOODS.filter(f => f.category === 'SIHAT');
-                const unhealthyList = PRESET_FOODS.filter(f => f.category === 'TIDAK_SIHAT');
-
-                // Pick 2-3 healthy items and 1-2 unhealthy items randomly
-                const detectedHealthy = healthyList.sort(() => 0.5 - Math.random()).slice(0, Math.floor(Math.random() * 2) + 2);
-                const detectedUnhealthy = unhealthyList.sort(() => 0.5 - Math.random()).slice(0, Math.floor(Math.random() * 2) + 1);
-
-                displayDetectedFoods(detectedHealthy, detectedUnhealthy);
-            }, 2000);
+            try {
+                const resultData = await callGeminiVisionApi(currentImageDataUrl);
+                renderAiResults(resultData);
+            } catch (error) {
+                console.error("Gemini AI Analysis Error:", error);
+                setAiErrorState(error.message || 'Gagal menganalisis gambar dengan Gemini AI.');
+            } finally {
+                setAiLoadingState(false);
+            }
         }
 
-        function displayDetectedFoods(healthyFoods, unhealthyFoods) {
-            // Update AI Status Badge
-            aiStatusCard.className = "w-full bg-emerald-100 border-3 border-emerald-300 card-rounded p-4 mb-6 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3";
-            aiIconBg.className = "w-11 h-11 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xl font-bold flex-shrink-0 shadow-sm";
-            aiStatusIcon.className = "fa-solid fa-circle-check";
-            aiStatusText.innerText = "Analisis selesai! Makanan berjaya dikenal pasti oleh Gemini AI.";
-            aiBadgeStatus.className = "bg-emerald-200 text-emerald-900 text-xs font-extrabold px-3 py-1.5 rounded-full border border-emerald-300 flex items-center gap-1.5";
-            aiBadgeStatus.innerHTML = `<i class="fa-solid fa-check text-emerald-700"></i> Imbasan Berjaya`;
+        
+async function callGeminiVisionApi(dataUrl) {
+    const apiUrl =
+        "https://pinggan-sihat-cilik-api.nurainaaamirul.workers.dev/";
 
-            // Render Healthy Foods
-            if (healthyFoods.length === 0) {
+    // Kecilkan gambar supaya permintaan tidak terlalu besar.
+    async function compressImage(source, maxSide = 280) {
+        return new Promise((resolve) => {
+            const img = new Image();
+
+            img.onload = () => {
+                const scale = Math.min(
+                    1,
+                    maxSide / Math.max(img.width, img.height)
+                );
+
+                const canvas = document.createElement("canvas");
+                canvas.width = Math.max(1, Math.round(img.width * scale));
+                canvas.height = Math.max(1, Math.round(img.height * scale));
+
+                const ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+                resolve(canvas.toDataURL("image/jpeg", 0.65));
+            };
+
+            img.onerror = () => resolve(source);
+            img.src = source;
+        });
+    }
+
+    function toInlineData(source) {
+        const match = source.match(/^data:(image\/[^;]+);base64,(.+)$/);
+
+        if (!match) return null;
+
+        return {
+            mimeType: match[1],
+            data: match[2]
+        };
+    }
+
+    const allowedIds = PRESET_FOODS.map(food => food.id);
+
+    const validFoodsListString = PRESET_FOODS
+        .map(food =>
+            `- ID: "${food.id}" | Nama: "${food.name}" | Kategori: "${food.category}"`
+        )
+        .join("\n");
+
+    const referenceFoods = PRESET_FOODS.filter(food =>
+        customFoodImages[cleanString(food.id)]?.image
+    );
+
+    const promptText = `
+Anda ialah sistem pengecaman makanan untuk aplikasi pendidikan prasekolah.
+
+GAMBAR RUJUKAN:
+Selepas arahan ini, anda akan menerima gambar rujukan makanan.
+Setiap gambar rujukan dilabel dengan ID dan nama makanan yang tepat.
+Gunakan gambar rujukan tersebut untuk membandingkan bentuk,
+warna dan rupa makanan dalam gambar pinggan sebenar.
+
+GAMBAR PINGGAN:
+Gambar yang dilabel "GAMBAR PINGGAN UNTUK DIKENAL PASTI"
+ialah gambar yang perlu dianalisis. Jangan anggap gambar rujukan
+sebagai makanan yang terdapat pada pinggan.
+
+PERATURAN:
+1. Kenal pasti hanya makanan yang benar-benar kelihatan pada pinggan.
+2. Bandingkan setiap makanan dengan gambar rujukan yang diberikan.
+3. Pilih ID yang paling sepadan dengan rupa makanan.
+4. Hanya pilih daripada senarai 21 makanan yang dibenarkan.
+5. Jangan masukkan makanan yang tidak kelihatan atau tidak pasti.
+6. Jangan masukkan ID yang sama lebih daripada sekali.
+7. Jika tiada makanan yang dapat dikenal pasti dengan munasabah,
+   pulangkan isFoodIdentified sebagai false dan items sebagai [].
+
+SENARAI MAKANAN DIBENARKAN:
+${validFoodsListString}
+
+Jumlah gambar rujukan yang tersedia: ${referenceFoods.length}.
+`;
+
+    const parts = [{ text: promptText }];
+
+    // Sertakan gambar rujukan sebenar yang dimuat naik.
+    for (const food of referenceFoods) {
+        const storedImage =
+            customFoodImages[cleanString(food.id)].image;
+
+        const smallImage = await compressImage(storedImage);
+        const inlineData = toInlineData(smallImage);
+
+        if (inlineData) {
+            parts.push({
+                text: `GAMBAR RUJUKAN: ID "${food.id}", nama "${food.name}", kategori "${food.category}".`
+            });
+
+            parts.push({ inlineData });
+        }
+    }
+
+    // Sertakan gambar pinggan yang perlu dianalisis.
+    const smallPlate = await compressImage(dataUrl, 900);
+    const plateInlineData = toInlineData(smallPlate);
+
+    if (!plateInlineData) {
+        throw new Error("Format gambar pinggan tidak dapat dibaca.");
+    }
+
+    parts.push({
+        text: "GAMBAR PINGGAN UNTUK DIKENAL PASTI:"
+    });
+    parts.push({ inlineData: plateInlineData });
+
+    const payload = {
+        contents: [{
+            role: "user",
+            parts
+        }],
+        generationConfig: {
+            responseMimeType: "application/json",
+            responseSchema: {
+                type: "OBJECT",
+                properties: {
+                    isFoodIdentified: { type: "BOOLEAN" },
+                    items: {
+                        type: "ARRAY",
+                        items: {
+                            type: "OBJECT",
+                            properties: {
+                                id: {
+                                    type: "STRING",
+                                    enum: allowedIds
+                                }
+                            },
+                            required: ["id"]
+                        }
+                    }
+                },
+                required: ["isFoodIdentified", "items"]
+            }
+        }
+    };
+
+    let delay = 1000;
+
+    for (let attempt = 0; attempt < 3; attempt++) {
+        try {
+            const response = await fetch(apiUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(payload)
+            });
+
+            if (!response.ok) {
+                throw new Error(`Ralat pelayan (${response.status})`);
+            }
+
+            const result = await response.json();
+            const jsonText =
+                result.candidates?.[0]?.content?.parts
+                    ?.find(part => part.text)?.text;
+
+            if (!jsonText) {
+                throw new Error(
+                    "AI tidak memulangkan keputusan. Sila cuba lagi."
+                );
+            }
+
+            const parsed = JSON.parse(jsonText);
+
+            // Pastikan hanya ID yang dibenarkan diterima.
+            const validItems = Array.isArray(parsed.items)
+                ? parsed.items.filter(item =>
+                    item && allowedIds.includes(item.id)
+                )
+                : [];
+
+            return {
+                isFoodIdentified:
+                    parsed.isFoodIdentified === true &&
+                    validItems.length > 0,
+                items: [
+                    ...new Map(
+                        validItems.map(item => [item.id, item])
+                    ).values()
+                ]
+            };
+
+        } catch (error) {
+            if (attempt === 2) throw error;
+
+            await new Promise(resolve => setTimeout(resolve, delay));
+            delay *= 2;
+        }
+    }
+}
+        function setAiLoadingState(isLoading) {
+            if (isLoading) {
+                scanningOverlay.classList.remove('hidden');
+                
+                aiStatusCard.className = "w-full bg-indigo-100 border-3 border-indigo-300 card-rounded p-4 mb-6 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3";
+                aiIconBg.className = "w-11 h-11 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xl font-bold flex-shrink-0 shadow-sm";
+                aiStatusIcon.className = "fa-solid fa-wand-magic-sparkles fa-spin";
+                aiStatusText.innerText = "Gemini AI sedang mengimbas makanan pada pinggan kamu...";
+                aiBadgeStatus.className = "bg-indigo-200 text-indigo-900 text-xs font-extrabold px-3 py-1.5 rounded-full border border-indigo-300 flex items-center gap-1.5";
+                aiBadgeStatus.innerHTML = '<i class="fa-solid fa-spinner fa-spin text-indigo-700"></i> Mengimbas...';
+
                 listHealthyFoods.innerHTML = `
-                    <div class="h-full flex flex-col items-center justify-center p-6 text-center text-gray-500 bg-white/70 rounded-2xl border-2 border-dashed border-gray-200 min-h-[260px]">
-                        <p class="font-bold text-sm">Tiada makanan sihat dikesan pada pinggan ini.</p>
+                    <div class="h-full flex flex-col items-center justify-center p-6 text-center text-emerald-800 bg-white/80 rounded-2xl border-2 border-dashed border-emerald-300 min-h-[260px]">
+                        <div class="text-4xl mb-3 animate-bounce">🍚🥦</div>
+                        <p class="font-extrabold text-sm md:text-base">Mengenal pasti makanan sihat...</p>
                     </div>`;
-            } else {
-                listHealthyFoods.innerHTML = healthyFoods.map(item => {
-                    const imgSrc = customFoodImages[item.id] || item.image;
-                    return `
-                        <div class="bg-white rounded-2xl p-3 border-2 border-emerald-200 shadow-sm flex items-center gap-3 transform transition hover:scale-[1.02]">
-                            <img src="${imgSrc}" alt="${item.name}" class="w-16 h-16 object-cover rounded-xl border border-emerald-300 flex-shrink-0 bg-emerald-50">
-                            <div class="flex-grow">
-                                <h4 class="font-extrabold text-emerald-950 text-base flex items-center gap-1.5">
-                                    <span>${item.emoji}</span>
-                                    <span>${item.name}</span>
-                                </h4>
-                                <span class="inline-block bg-emerald-100 text-emerald-800 text-[10px] font-extrabold px-2 py-0.5 rounded-full border border-emerald-300 mt-1">
-                                    Sihat 😊
-                                </span>
-                            </div>
-                        </div>`;
-                }).join('');
-            }
-            healthyCountTag.innerText = `${healthyFoods.length} Makanan Sihat Ditemui`;
 
-            // Render Unhealthy Foods
-            if (unhealthyFoods.length === 0) {
                 listUnhealthyFoods.innerHTML = `
-                    <div class="h-full flex flex-col items-center justify-center p-6 text-center text-gray-500 bg-white/70 rounded-2xl border-2 border-dashed border-pink-200 min-h-[260px]">
-                        <p class="font-bold text-sm">Syabas! Tiada makanan tidak sihat dikesan.</p>
+                    <div class="h-full flex flex-col items-center justify-center p-6 text-center text-pink-800 bg-white/80 rounded-2xl border-2 border-dashed border-pink-300 min-h-[260px]">
+                        <div class="text-4xl mb-3 animate-bounce">🍩🍟</div>
+                        <p class="font-extrabold text-sm md:text-base">Mengenal pasti makanan perlu dikurangkan...</p>
                     </div>`;
+
+                healthyCountTag.innerText = "Mengimbas...";
+                unhealthyCountTag.innerText = "Mengimbas...";
             } else {
-                listUnhealthyFoods.innerHTML = unhealthyFoods.map(item => {
-                    const imgSrc = customFoodImages[item.id] || item.image;
-                    return `
-                        <div class="bg-white rounded-2xl p-3 border-2 border-pink-200 shadow-sm flex items-center gap-3 transform transition hover:scale-[1.02]">
-                            <img src="${imgSrc}" alt="${item.name}" class="w-16 h-16 object-cover rounded-xl border border-pink-300 flex-shrink-0 bg-pink-50">
-                            <div class="flex-grow">
-                                <h4 class="font-extrabold text-pink-950 text-base flex items-center gap-1.5">
-                                    <span>${item.emoji}</span>
-                                    <span>${item.name}</span>
-                                </h4>
-                                <span class="inline-block bg-pink-100 text-pink-800 text-[10px] font-extrabold px-2 py-0.5 rounded-full border border-pink-300 mt-1">
-                                    Tidak Sihat 😟
-                                </span>
-                            </div>
-                        </div>`;
-                }).join('');
+                scanningOverlay.classList.add('hidden');
             }
-            unhealthyCountTag.innerText = `${unhealthyFoods.length} Makanan Tidak Sihat`;
+        }
+
+        function setAiErrorState(message) {
+            aiStatusCard.className = "w-full bg-rose-100 border-3 border-rose-300 card-rounded p-4 mb-6 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3";
+            aiIconBg.className = "w-11 h-11 rounded-full bg-rose-600 text-white flex items-center justify-center text-xl font-bold flex-shrink-0 shadow-sm";
+            aiStatusIcon.className = "fa-solid fa-circle-exclamation";
+            aiStatusText.innerText = "Ralat Pengecaman Gemini AI";
+            aiBadgeStatus.className = "bg-rose-200 text-rose-900 text-xs font-extrabold px-3 py-1.5 rounded-full border border-rose-300";
+            aiBadgeStatus.innerText = "Gagal";
+
+            listHealthyFoods.innerHTML = `
+                <div class="h-full flex flex-col items-center justify-center p-6 text-center text-rose-800 bg-white/80 rounded-2xl border-2 border-dashed border-rose-300 min-h-[240px]">
+                    <div class="text-3xl mb-2">⚠️</div>
+                    <p class="font-extrabold text-sm">${message}</p>
+                    <button onclick="startAiPlateScan()" class="mt-3 bg-rose-500 text-white font-extrabold px-4 py-2 rounded-xl text-xs shadow-sm">Cuba Lagi</button>
+                </div>`;
+
+            listUnhealthyFoods.innerHTML = listHealthyFoods.innerHTML;
+        }
+
+        function cleanString(str) {
+            if (!str) return '';
+            return str.toString().toLowerCase().replace(/[^a-z0-9]/g, '').trim();
+        }
+
+        // Strictly resolve food item from PRESET_FOODS dictionary
+        function resolveFoodItem(item) {
+            const rawId = item.id || '';
+            const normId = cleanString(rawId);
+
+            const matchedPreset = PRESET_FOODS.find(p => cleanString(p.id) === normId);
+            if (!matchedPreset) return null;
+
+            // Use custom user-uploaded reference image if available, else fallback to default reference
+            const activeImage = customFoodImages[normId] ? customFoodImages[normId].image : matchedPreset.image;
+
+            return {
+                id: matchedPreset.id,
+                name: matchedPreset.name,
+                image: activeImage,
+                category: matchedPreset.category,
+                emoji: matchedPreset.emoji
+            };
+        }
+
+        function renderAiResults(data) {
+            const isFoodIdentified = data.isFoodIdentified !== false;
+            const rawItems = data.items || [];
+
+            const uniqueFoodMap = new Map();
+            rawItems.forEach(item => {
+                const resolved = resolveFoodItem(item);
+                if (resolved && !uniqueFoodMap.has(resolved.id)) {
+                    uniqueFoodMap.set(resolved.id, resolved);
+                }
+            });
+
+            const processedFoods = Array.from(uniqueFoodMap.values());
+            const healthyFoods = processedFoods.filter(f => f.category === 'SIHAT');
+            const unhealthyFoods = processedFoods.filter(f => f.category === 'PERLU_DIKURANGKAN');
+
+            if (isFoodIdentified && processedFoods.length > 0) {
+                aiStatusCard.className = "w-full bg-emerald-100 border-3 border-emerald-300 card-rounded p-4 mb-6 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3";
+                aiIconBg.className = "w-11 h-11 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xl font-bold flex-shrink-0 shadow-sm";
+                aiStatusIcon.className = "fa-solid fa-circle-check";
+                aiStatusText.innerText = "Pengecaman Gemini AI Berjaya!";
+                aiBadgeStatus.className = "bg-emerald-200 text-emerald-900 text-xs font-extrabold px-3 py-1.5 rounded-full border border-emerald-300";
+                aiBadgeStatus.innerHTML = '<i class="fa-solid fa-check mr-1"></i> Selesai';
+            } else {
+                aiStatusCard.className = "w-full bg-amber-100 border-3 border-amber-300 card-rounded p-4 mb-6 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3";
+                aiIconBg.className = "w-11 h-11 rounded-full bg-amber-500 text-white flex items-center justify-center text-xl font-bold flex-shrink-0 shadow-sm";
+                aiStatusIcon.className = "fa-solid fa-magnifying-glass";
+                aiStatusText.innerText = "Makanan Tidak Dapat Dikenal Pasti";
+                aiBadgeStatus.className = "bg-amber-200 text-amber-900 text-xs font-extrabold px-3 py-1.5 rounded-full border border-amber-300";
+                aiBadgeStatus.innerHTML = '<i class="fa-solid fa-circle-question mr-1"></i> Makanan Tidak Jelas';
+            }
+
+            // Render Healthy Foods Column
+            if (healthyFoods.length > 0) {
+                listHealthyFoods.innerHTML = healthyFoods.map(item => `
+                    <div class="bg-white p-3 rounded-2xl border-2 border-emerald-200 shadow-sm flex items-center gap-4 transform transition hover:scale-[1.02]">
+                        <div class="relative w-16 h-16 md:w-20 md:h-20 flex-shrink-0">
+                            <img src="${item.image}" alt="${escapeHtml(item.name)}" 
+                                 class="w-16 h-16 md:w-20 md:h-20 object-cover rounded-xl border-2 border-emerald-300 shadow-sm">
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="font-extrabold text-emerald-950 text-base md:text-lg leading-tight">${escapeHtml(item.name)}</h4>
+                        </div>
+                    </div>
+                `).join('');
+                healthyCountTag.innerText = `${healthyFoods.length} Makanan Sihat Ditemui`;
+            } else {
+                listHealthyFoods.innerHTML = `
+                    <div class="h-full flex flex-col items-center justify-center p-6 text-center text-emerald-800 bg-white/70 rounded-2xl border-2 border-dashed border-emerald-200 min-h-[240px]">
+                        <div class="text-3xl mb-2">🥦</div>
+                        <p class="font-extrabold text-sm">${isFoodIdentified ? 'Tiada Makanan Sihat Dikesan' : 'Tidak dapat mengenal pasti makanan sihat'}</p>
+                    </div>`;
+                healthyCountTag.innerText = "0 Makanan Sihat";
+            }
+
+            // Render Unhealthy Foods Column
+            if (unhealthyFoods.length > 0) {
+                listUnhealthyFoods.innerHTML = unhealthyFoods.map(item => `
+                    <div class="bg-white p-3 rounded-2xl border-2 border-pink-200 shadow-sm flex items-center gap-4 transform transition hover:scale-[1.02]">
+                        <div class="relative w-16 h-16 md:w-20 md:h-20 flex-shrink-0">
+                            <img src="${item.image}" alt="${escapeHtml(item.name)}" 
+                                 class="w-16 h-16 md:w-20 md:h-20 object-cover rounded-xl border-2 border-pink-300 shadow-sm">
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="font-extrabold text-pink-950 text-base md:text-lg leading-tight">${escapeHtml(item.name)}</h4>
+                        </div>
+                    </div>
+                `).join('');
+                unhealthyCountTag.innerText = `${unhealthyFoods.length} Makanan Perlu Dikurangkan`;
+            } else {
+                listUnhealthyFoods.innerHTML = `
+                    <div class="h-full flex flex-col items-center justify-center p-6 text-center text-pink-800 bg-white/70 rounded-2xl border-2 border-dashed border-pink-200 min-h-[240px]">
+                        <div class="text-3xl mb-2">${isFoodIdentified ? '🎉👏' : '❓'}</div>
+                        <p class="font-extrabold text-sm text-pink-900">${isFoodIdentified ? 'Bagus! Tiada Makanan Perlu Dikurangkan Dikesan' : 'Tidak dapat mengenal pasti makanan perlu dikurangkan'}</p>
+                    </div>`;
+                unhealthyCountTag.innerText = "0 Makanan Perlu Dikurangkan";
+            }
+        }
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/[&<>"']/g, function(m) {
+                return {
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    '"': '&quot;',
+                    "'": '&#039;'
+                }[m];
+            });
+        }
+
+        function showErrorBanner(message) {
+            textErrorMessage.innerHTML = `<i class="fa-solid fa-circle-exclamation mr-2"></i> ${message}`;
+            bannerError.classList.remove('hidden');
+            bannerError.classList.add('flex');
+        }
+
+        function hideErrorBanner() {
+            bannerError.classList.add('hidden');
+            bannerError.classList.remove('flex');
         }
 
         function openCustomImageModal() {
-            renderCustomFoodsList();
-            document.getElementById('modal-custom-images').classList.remove('hidden');
-            document.getElementById('modal-custom-images').classList.add('flex');
+            renderCustomFoodList();
+            const modal = document.getElementById('modal-custom-images');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
         }
 
         function closeCustomImageModal() {
-            document.getElementById('modal-custom-images').classList.add('hidden');
-            document.getElementById('modal-custom-images').classList.remove('flex');
+            const modal = document.getElementById('modal-custom-images');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
         }
 
-        function renderCustomFoodsList() {
+        async function handleZipUpload(event) {
+            const files = event.target.files;
+            if (!files || files.length === 0) return;
+
+            const zipStatusMsg = document.getElementById('zip-status-msg');
+            zipStatusMsg.className = "mt-3 text-xs font-bold text-amber-900 bg-amber-100 border border-amber-300 p-2 rounded-xl w-full text-center flex items-center justify-center gap-2";
+            zipStatusMsg.innerHTML = '<i class="fa-solid fa-spinner fa-spin text-amber-600"></i> Membaca dan mengestrak fail ZIP...';
+            zipStatusMsg.classList.remove('hidden');
+
+            let totalExtracted = 0;
+            const matchedNames = [];
+
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                if (!file.name.toLowerCase().endsWith('.zip')) continue;
+
+                try {
+                    const zip = await JSZip.loadAsync(file);
+                    
+                    for (let relativePath in zip.files) {
+                        const zipEntry = zip.files[relativePath];
+                        if (zipEntry.dir) continue;
+
+                        const fileName = zipEntry.name.split('/').pop();
+                        if (!fileName || fileName.startsWith('.') || fileName.startsWith('__MACOSX')) continue;
+
+                        const nameWithoutExt = fileName.substring(0, fileName.lastIndexOf('.')) || fileName;
+                        const cleanFileName = cleanString(nameWithoutExt);
+
+                        // Match zip filename against PRESET_FOODS
+                        const matchedFood = PRESET_FOODS.find(preset => {
+                            const pIdClean = cleanString(preset.id);
+                            const pNameClean = cleanString(preset.name);
+                            return cleanFileName === pIdClean || 
+                                   cleanFileName.includes(pIdClean) || 
+                                   pIdClean.includes(cleanFileName) ||
+                                   cleanFileName.includes(pNameClean);
+                        });
+
+                        if (matchedFood) {
+                            const base64Data = await zipEntry.async('base64');
+                            let mimeType = 'image/jpeg';
+                            if (fileName.toLowerCase().endsWith('.png')) mimeType = 'image/png';
+                            if (fileName.toLowerCase().endsWith('.webp')) mimeType = 'image/webp';
+
+                            const normId = cleanString(matchedFood.id);
+                            customFoodImages[normId] = {
+                                name: matchedFood.name,
+                                image: `data:${mimeType};base64,${base64Data}`,
+                                category: matchedFood.category,
+                                emoji: matchedFood.emoji
+                            };
+
+                            totalExtracted++;
+                            if (!matchedNames.includes(matchedFood.name)) {
+                                matchedNames.push(matchedFood.name);
+                            }
+                        }
+                    }
+                } catch (err) {
+                    console.error("Ralat pengekstrakan ZIP:", err);
+                }
+            }
+
+            // Save extracted custom reference images to Local Storage
+            try {
+                localStorage.setItem('pinggan_sihat_custom_images', JSON.stringify(customFoodImages));
+            } catch(e) {
+                console.warn("Spasium simpanan tempatan terhad.", e);
+            }
+
+            renderCustomFoodList();
+
+            if (totalExtracted > 0) {
+                zipStatusMsg.className = "mt-3 text-xs font-bold text-emerald-900 bg-emerald-100 border border-emerald-300 p-2 rounded-xl w-full text-center";
+                zipStatusMsg.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i> Berjaya mengestrak ${totalExtracted} gambar rujukan makanan! (${matchedNames.join(', ')})`;
+            } else {
+                zipStatusMsg.className = "mt-3 text-xs font-bold text-rose-900 bg-rose-100 border border-rose-300 p-2 rounded-xl w-full text-center";
+                zipStatusMsg.innerHTML = `<i class="fa-solid fa-circle-exclamation text-rose-600 mr-1"></i> Tiada nama fail gambar yang sepadan dengan 21 makanan ditemui dalam fail ZIP.`;
+            }
+        }
+
+async function loadReferenceZipsAutomatically() {
+    const zipUrls = [
+        "https://raw.githubusercontent.com/nurainaaamirul-cloud/Pinggan-Makanan-Sihat-Cilik/main/gambar-sihat.zip",
+        "https://raw.githubusercontent.com/nurainaaamirul-cloud/Pinggan-Makanan-Sihat-Cilik/main/gambar-perlu-dikurangkan.zip"
+    ];
+
+    try {
+        const files = [];
+
+        for (const url of zipUrls) {
+            const response = await fetch(url);
+
+            if (!response.ok) {
+                throw new Error("Gagal memuat turun: " + url);
+            }
+
+            const blob = await response.blob();
+            const fileName = url.substring(url.lastIndexOf("/") + 1);
+
+            files.push(
+                new File([blob], fileName, {
+                    type: "application/zip"
+                })
+            );
+        }
+
+        await handleZipUpload({
+            target: {
+                files: files
+            }
+        });
+
+        console.log("Gambar rujukan ZIP selesai dimuatkan.");
+    } catch (error) {
+        console.error("Gagal memuatkan gambar rujukan ZIP:", error);
+    }
+}
+        function renderCustomFoodList() {
             const container = document.getElementById('custom-foods-list');
+            if (!container) return;
+
             container.innerHTML = PRESET_FOODS.map(food => {
-                const isCustom = !!customFoodImages[food.id];
-                const displayImg = customFoodImages[food.id] || food.image;
-                const categoryBadge = food.category === 'SIHAT' 
-                    ? `<span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full">Sihat</span>`
-                    : `<span class="bg-pink-100 text-pink-800 text-[10px] font-bold px-2 py-0.5 rounded-full">Tidak Sihat</span>`;
+                const normId = cleanString(food.id);
+                const activeImg = customFoodImages[normId] ? customFoodImages[normId].image : food.image;
+                const isCustom = !!customFoodImages[normId];
+                const isHealthy = food.category === 'SIHAT';
 
                 return `
-                    <div class="flex items-center justify-between p-2.5 bg-gray-50 rounded-2xl border border-gray-200">
+                    <div class="p-3 bg-slate-50 rounded-2xl border-2 ${isHealthy ? 'border-emerald-200' : 'border-pink-200'} flex items-center justify-between gap-3">
                         <div class="flex items-center gap-3">
-                            <img src="${displayImg}" alt="${food.name}" class="w-12 h-12 object-cover rounded-xl border border-gray-300 bg-white">
+                            <img src="${activeImg}" alt="${escapeHtml(food.name)}" class="w-12 h-12 rounded-xl object-cover border-2 ${isHealthy ? 'border-emerald-400' : 'border-pink-400'} shadow-sm">
                             <div>
-                                <div class="flex items-center gap-2">
-                                    <span class="font-bold text-sm text-gray-800">${food.name}</span>
-                                    ${categoryBadge}
-                                </div>
-                                <span class="text-[11px] text-gray-500 font-semibold">${isCustom ? 'Gambar Tersuai' : 'Gambar Default'}</span>
+                                <h5 class="font-extrabold text-slate-800 text-sm md:text-base">${escapeHtml(food.name)}</h5>
+                                <span class="text-xs font-bold ${isHealthy ? 'text-emerald-600' : 'text-pink-600'}">
+                                    ${isHealthy ? '😊 Sihat' : '😟 Perlu Dikurangkan'} ${isCustom ? '• (Gambar Rujukan ZIP)' : ''}
+                                </span>
                             </div>
                         </div>
+
                         <div class="flex items-center gap-2">
-                            <label for="file-${food.id}" class="btn-kid bg-amber-400 hover:bg-amber-500 text-amber-950 font-bold text-xs px-3 py-1.5 rounded-lg cursor-pointer">
-                                Tukar
+                            <label class="btn-kid bg-amber-400 hover:bg-amber-500 text-amber-950 font-bold text-xs px-3 py-2 rounded-xl cursor-pointer border-b-2 border-amber-600 flex items-center gap-1">
+                                <i class="fa-solid fa-upload"></i>
+                                <span>Tukar</span>
+                                <input type="file" accept="image/*" class="hidden" onchange="uploadFoodReferenceImage(event, '${food.id}', '${escapeHtml(food.name)}', '${food.category}', '${food.emoji}')">
                             </label>
-                            <input type="file" id="file-${food.id}" accept="image/*" class="hidden" onchange="uploadIndividualFoodImage('${food.id}', event)">
                             ${isCustom ? `
-                                <button onclick="resetIndividualFoodImage('${food.id}')" class="text-rose-500 hover:text-rose-700 text-xs p-1">
-                                    <i class="fa-solid fa-rotate-left"></i>
+                                <button onclick="removeFoodReferenceImage('${food.id}')" class="text-rose-500 hover:text-rose-700 p-2 font-bold text-sm" title="Padam Gambar">
+                                    <i class="fa-solid fa-trash-can"></i>
                                 </button>
                             ` : ''}
                         </div>
-                    </div>`;
+                    </div>
+                `;
             }).join('');
         }
 
-        function uploadIndividualFoodImage(foodId, event) {
+        function uploadFoodReferenceImage(event, foodId, name, category, emoji) {
             const file = event.target.files[0];
             if (!file) return;
 
             const reader = new FileReader();
             reader.onload = function(e) {
-                customFoodImages[foodId] = e.target.result;
-                saveCustomImagesToStorage();
-                renderCustomFoodsList();
+                const normId = cleanString(foodId);
+                customFoodImages[normId] = {
+                    name: name,
+                    image: e.target.result,
+                    category: category,
+                    emoji: emoji
+                };
+                try {
+                    localStorage.setItem('pinggan_sihat_custom_images', JSON.stringify(customFoodImages));
+                } catch(err) {}
+                renderCustomFoodList();
             };
             reader.readAsDataURL(file);
         }
 
-        function resetIndividualFoodImage(foodId) {
-            delete customFoodImages[foodId];
-            saveCustomImagesToStorage();
-            renderCustomFoodsList();
+        function removeFoodReferenceImage(foodId) {
+            const normId = cleanString(foodId);
+            delete customFoodImages[normId];
+            try {
+                localStorage.setItem('pinggan_sihat_custom_images', JSON.stringify(customFoodImages));
+            } catch(err) {}
+            renderCustomFoodList();
         }
 
         function resetAllReferenceImages() {
             customFoodImages = {};
             localStorage.removeItem('pinggan_sihat_custom_images');
-            renderCustomFoodsList();
+            document.getElementById('zip-status-msg').classList.add('hidden');
+            renderCustomFoodList();
         }
-
-        function saveCustomImagesToStorage() {
-            try {
-                localStorage.setItem('pinggan_sihat_custom_images', JSON.stringify(customFoodImages));
-            } catch (e) {
-                console.warn("Storage full or unavailable", e);
-            }
-        }
-
-        async function handleZipUpload(event) {
-            const files = event.target.files;
-            const statusMsg = document.getElementById('zip-status-msg');
-            if (!files || files.length === 0) return;
-
-            statusMsg.classList.remove('hidden');
-            statusMsg.className = "mt-3 text-xs font-bold text-indigo-800 bg-indigo-100 border border-indigo-300 p-2 rounded-xl w-full text-center";
-            statusMsg.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-1"></i> Membaca dan mengekstrak fail ZIP...`;
-
-            let extractedCount = 0;
-
-            try {
-                for (let i = 0; i < files.length; i++) {
-                    const zipFile = files[i];
-                    const zip = await JSZip.loadAsync(zipFile);
-
-                    for (let relativePath in zip.files) {
-                        const fileEntry = zip.files[relativePath];
-                        if (fileEntry.dir) continue;
-
-                        const fileName = relativePath.split('/').pop().toLowerCase();
-                        
-                        // Match file name against preset food IDs
-                        const matchedFood = PRESET_FOODS.find(f => {
-                            const cleanName = f.id.toLowerCase();
-                            return fileName.includes(cleanName) || cleanName.includes(fileName.split('.')[0]);
-                        });
-
-                        if (matchedFood) {
-                            const blob = await fileEntry.async('blob');
-                            const base64 = await new Promise((resolve) => {
-                                const reader = new FileReader();
-                                reader.onloadend = () => resolve(reader.result);
-                                reader.readAsDataURL(blob);
-                            });
-                            customFoodImages[matchedFood.id] = base64;
-                            extractedCount++;
-                        }
-                    }
-                }
-
-                saveCustomImagesToStorage();
-                renderCustomFoodsList();
-
-                statusMsg.className = "mt-3 text-xs font-bold text-emerald-800 bg-emerald-100 border border-emerald-300 p-2 rounded-xl w-full text-center";
-                statusMsg.innerHTML = `<i class="fa-solid fa-circle-check mr-1"></i> Berjaya mengekstrak ${extractedCount} gambar rujukan!`;
-            } catch (err) {
-                console.error("ZIP extraction error:", err);
-                statusMsg.className = "mt-3 text-xs font-bold text-rose-800 bg-rose-100 border border-rose-300 p-2 rounded-xl w-full text-center";
-                statusMsg.innerHTML = `<i class="fa-solid fa-circle-xmark mr-1"></i> Gagal mengekstrak ZIP. Sila pastikan fail ZIP sah.`;
-            }
-        }
+            loadReferenceZipsAutomatically();
     </script>
 </body>
 </html>
